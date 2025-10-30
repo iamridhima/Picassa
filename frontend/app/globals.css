@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient background applied to body */
+html, body {
+  @apply min-h-screen bg-gradient-to-b from-purple-200 to-yellow-100;
+}

@@ -1,1 +1,14 @@
+#Datset
 dataset/dataset.csv
+
+#Environment Variables
+.env
+.env.*
+
+#python cache and logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log

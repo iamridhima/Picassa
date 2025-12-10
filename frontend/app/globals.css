@@ -1,9 +1,8 @@
-@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Gradient background applied to body */
 html, body {
-  @apply min-h-screen bg-gradient-to-b from-purple-200 to-yellow-100;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgb(233, 213, 255), rgb(254, 249, 195));
 }

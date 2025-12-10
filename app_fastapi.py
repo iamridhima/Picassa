@@ -23,7 +23,7 @@ spark = SparkSession.builder.appName("MusicRecommendation").getOrCreate()
 # ----------------------------
 # Load dataset once
 # ----------------------------
-def load_dataset(file_path="dataset/dataset.csv"):
+def load_dataset(file_path="hdfs://127.0.0.1:9000/user/hdoop/picassaa/dataset.csv"):
     df = spark.read.csv(file_path, header=True, inferSchema=True)
     first_col = df.columns[0]
     if first_col == "" or first_col.startswith("_c0"):

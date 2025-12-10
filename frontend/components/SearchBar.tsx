@@ -16,8 +16,7 @@ export default function SearchBar({ setResults }: Props) {
     setLoading(true);
 
     try {
-      // 1️⃣ Get recommendations
-      const recRes = await fetch(`http://localhost:8001/recommend/`, {
+      const recRes = await fetch(`http://localhost:8000/recommend/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ song_name: query }),
@@ -30,7 +29,7 @@ export default function SearchBar({ setResults }: Props) {
         songs.map(async (s) => {
           try {
             const spRes = await fetch(
-              `http://localhost:8001/spotify/?q=${encodeURIComponent(s.track_name)}`
+              `http://localhost:8000/spotify/?q=${encodeURIComponent(s.track_name)}`
             );
             const spData = await spRes.json();
             const firstResult = spData.results[0] || {};

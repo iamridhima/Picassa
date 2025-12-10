@@ -7,25 +7,27 @@ Prerequisites:
 
 
 ### Switch to Hadoop user
-su - username
+```su - username```
 
 ### Start HDFS
-start-dfs.sh
+```start-dfs.sh```
 
 ### Check running services
-jps
+```jps```
 
 (should show namenode, datanode, secondarynamenode)
 
 ### Backend
-cd backend
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```cd backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000```
+
 
 ### Frontend
-cd frontend
+```cd frontend
 npm install
 npm install tailwindcss postcss autoprefixer
 npm run dev
+```
 
 Backend runs at http://localhost:8000
 Frontend runs at http://localhost:3000

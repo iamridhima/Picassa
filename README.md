@@ -6,22 +6,22 @@ Prerequisites:
 - Spark 3.5.7 installed
 
 
-# switch to Hadoop user
+### Switch to Hadoop user
 su - username
 
-# start HDFS
+### Start HDFS
 start-dfs.sh
 
-# check running services
+### Check running services
 jps
 
-# (should show namenode, datanode, secondarynamenode)
+(should show namenode, datanode, secondarynamenode)
 
-# backend
+### Backend
 cd backend
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-# frontend
+### Frontend
 cd frontend
 npm install
 npm install tailwindcss postcss autoprefixer
